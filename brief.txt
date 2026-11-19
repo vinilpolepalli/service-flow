@@ -1,0 +1,10 @@
+Project: "Service Flow" - independent demo inspired by the problem space of Bernard (YC S26), agents for appliance service businesses that coordinate bookings, diagnosis, parts and technician handoffs. NOT affiliated; footer says so.
+
+Concept: an operations board for a fictional appliance repair shop ("Demo Appliance Co"):
+- ~8-10 sample repair tickets (synthetic customers/appliances: washers, fridges, ovens) flowing through stages: Booked -> Diagnosed -> Parts -> Scheduled -> Completed.
+- Deterministic attention rules flag tickets: PART DELAYED (part ETA past scheduled visit), SLA RISK (promised window within 24h but stage behind), READY TO SCHEDULE (diagnosis done, part on hand). Fixed visible thresholds.
+- Clicking a ticket shows a handoff timeline: each stage with timestamped synthetic entries showing what an agent coordinated (booking confirmed, diagnosis summary, part ordered with ETA, tech assigned).
+- A small day-schedule panel for 2 fictional technicians.
+Honesty bar: header badge "Sample data - demo"; copy states all tickets/customers are synthetic and rules are fixed-threshold illustrations; footer: "Independent demo built by Vinil Polepalli. Not affiliated with or endorsed by Bernard."
+UI: dark sleek, distinct accent ORANGE (not indigo/emerald/amber/sky/rose/lime/violet; make it clearly orange, not amber).
+Tech: Next.js static export (output:'export'), npm run build must pass, no runtime external calls. Write SPEC.md first, then slices. No git commit, no deploy.
